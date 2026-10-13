@@ -1,8 +1,7 @@
-function getShippingMessage(country, price, deliveryFee) {
-  const totalPrice = price + deliveryFee;
-  return `Shipping to ${country} will cost ${totalPrice} credits`;
+function getElementWidth(content, padding, border) {
+  return content + padding * 2 + border * 2;
 }
 
-console.log(getShippingMessage('Australia', 120, 50)); // "Shipping to Australia will cost 170 credits"
-console.log(getShippingMessage('Germany', 80, 20)); // "Shipping to Germany will cost 100 credits"
-console.log(getShippingMessage('Sweden', 100, 20)); // "Shipping to Sweden will cost 120 credits"
+console.log(getElementWidth(50, 8, 4)); // 74
+console.log(getElementWidth(60, 12, 8.5)); // 101
+console.log(getElementWidth(200, 0, 0)); // 200
